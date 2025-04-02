@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operadores logicos</title>
+</head>
+<body>
+    <script>
+        const nota1 = 10
+        const nota2 = 5
+        const nota3 = 10
+        const nota4 = 0
+        const falta = 3
+        const media = (nota1 + nota2 + nota3 + nota4)/4
+         
+        if (media > 7 && falta < 4) {
+            console.log("Aprovado")
+        }else if(media < 7 && media > 5 && falta > 4){
+            console.log("recuperaçao")
+        }else if(media < 5 && falta <= 4){
+            console.log("reprovado")
+        }
+        else{
+            console.log("jubilado")
+        }
+    </script>
+</body>
+</html>

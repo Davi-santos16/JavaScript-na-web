@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // pets=["morcego", "macaco", "tinho"]
+        // alert(pets.includes("hamister"))
+        // alert(pets.indexOf("tinho"))
+        const alunos = ['joao','juliana','caio','ana']
+        const medias = [10,8,7.5,9
+        ]                      //0   //1
+        const alunosMedia = [alunos,medias]
+
+        const ExibeNomeEstudante = (informaçao) => {
+            if (alunosMedia[0].includes(informaçao)) {
+                const indexAluno = alunosMedia[0].indexOf(informaçao)
+                const nomeAluno = alunosMedia[0][indexAluno]
+                const mediaAluno = alunosMedia[1][indexAluno]
+                return `o nome do aluno é:${nomeAluno} e sau media é ${mediaAluno} `
+            }
+            else{
+                return `estudante nao existe`
+            }
+
+
+        }
+        const informaçao = prompt("Digite o nome do Estudante:")
+        alert(ExibeNomeEstudante(informaçao))
+    </script>
+</body>
+</html>

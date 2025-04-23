@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="mensagem">texto aqui</p>
+    <div class="container">
+        <p>conteudo contener</p>
+    </div>
+    <script>
+        const p = document.querySelector(".mensagem")
+        const conteudo = document.querySelector(".container p")
+        const paragrafos = document.querySelectorAll("p")
+
+        alert(paragrafos.length)
+        
+       
+        p.innerText = "alterando texto"
+        conteudo.style.backgroundColor = "red"
+    </script>
+</body>
+</html>

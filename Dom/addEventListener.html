@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bnt{
+            padding: 100px;
+            background-color: red;
+            border-radius: 15px;
+            border: solid yellow;
+            box-shadow: 2px 2px 2px 2px black;
+
+        }
+        #minhadiv{
+            background-color: rgb(212, 178, 178);
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="bnt">clique</button>
+    <div id="minhadiv"></div>
+    <script>
+        const button = document.getElementById("bnt")
+        const div = document.getElementById("minhadiv")
+        button.addEventListener("click", () =>{
+            div.style.backgroundColor = "black"
+            div.style.height = "300px"
+            // alert("Bem vindo!!")
+        })
+    </script>
+</body>
+</html>

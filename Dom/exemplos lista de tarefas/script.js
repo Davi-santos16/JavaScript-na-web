@@ -1,25 +1,50 @@
 const taskInput = document.getElementById("taskInput")
-const addBtn = document.getElementById("addbtn")
-const TaskList = document.getElementById("TaskList")
+const addBtn = document.getElementById("addBtn")
+const taskList = document.getElementById("taskList")
+const filterInput = document.getElementById("filterInput")
 
-addBtn.addEventListener("click", () =>{
-    
+addBtn.addEventListener("click", ()=>{
+
     const taskText = taskInput.value
-    if (taskText==="")return 
+    if(taskText === "") return
+    
     const li = document.createElement("li")
-    TaskList.appendChild(li)
     li.innerText = taskText
 
     const removeBtn = document.createElement("button")
-    removeBtn.textContent = "remover"
-    removeBtn.addEventListener("click", () =>{
-        TaskList.removeChild(li)
-        // TaskList.removeChild(removeBtn)
+    removeBtn.textContent = "Remover"
+    removeBtn.style.marginLeft = "10px"
+    removeBtn.addEventListener("click", ()=>{
+        taskList.removeChild(li)
+    })
+
+    taskList.appendChild(li)
+    li.appendChild(removeBtn)
+    taskInput.value = ""
+
+})
+
+filterInput.addEventListener("input", () =>{
+
+    const filterText = filterInput.value.toLowerCase()
+    const tasks = taskList.querySelectorAll("li")
+
+    tasks.forEach((task)=>{
+        const taskName = task.firstChild.textContent.toLowerCase()
+       
+        if(taskName.includes(filterText)){
+            task.classList.remove("hidden")
+            task.style.display = ""
+
+        }else {
+            task.classList.add("hidden")
+            task.style.display = "none"
+
+        }
+
     })
 
 
 
-    li.appendChild(removeBtn)
 
-    taskInput.value = ""
-})
+} )

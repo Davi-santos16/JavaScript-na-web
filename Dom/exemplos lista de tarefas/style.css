@@ -1,0 +1,25 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+    
+}
+h1{
+    text-align: center;
+}
+ul{
+    /* list-style: none; */
+    
+}
+li{
+    background-color: rgba(11, 27, 199, 0.669);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}

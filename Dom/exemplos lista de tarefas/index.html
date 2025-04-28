@@ -1,29 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lista de tarefas</title>
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    
     <style>
-        
+
+        .hidden {
+            display: none;
+        }
+
     </style>
+
+
 </head>
 <body>
-    <h1>lista de tarefas</h1>
+    
+    <h1>Lista de Tarefas</h1>
 
     <section class="container">
 
-        <ul id="TaskList">
-            
+        <div class="filter-container">
+            <input type="text" 
+            id="filterInput" 
+            placeholder="Filtrar tarefas...">
+        </div>
+
+        <ul id="taskList">
         </ul>
 
-
         <div class="input-container">
-            <input type="text" name="" id="taskInput" placeholder="Digite sua tarefa">
-            <button id="addbtn" >adicionar</button>
-            
+            <input  type="text" id="taskInput" placeholder="Digite sua tarefa">
+            <button id="addBtn">Adicionar</button>
         </div>
+
     </section>
+
+
     <script src="script.js"></script>
 </body>
 </html>
